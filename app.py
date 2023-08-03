@@ -7,7 +7,7 @@ def main():
     input_text = st.text_area("Enter text here")
 
     # Run buttons
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     if col1.button("Run on Left"):
         run_analysis(input_text)
 
