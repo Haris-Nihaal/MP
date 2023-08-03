@@ -1,18 +1,25 @@
 import streamlit as st
-
-def square_number(number):
-    return number ** 2
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 def main():
-    st.title("Simple Square Number App")
-    st.write("Enter a number below and click on the button to calculate its square.")
+    st.title("THEME GENERATOR")
 
-    # Input box for the user to enter the number
-    user_input = st.number_input(label="Enter a number", step=1)
+    # Empty box (placeholder)
+    input_text = st.text_area("Enter text here", value="")
 
-    if st.button("Calculate"):
-        result = square_number(user_input)
-        st.write(f"The square of {user_input} is {result}.")
+    # Run button
+    if st.button("Run"):
+        # Perform some action here when the button is clicked
 
-if __name__ == "__main__":
+        labels = ['teamless', 'impact-driven', 'productivity', 'misscommunication','cross level marketing']
+        sizes = [13.9,20.8,16.7,26.4,22.2]
+        fig1, ax1 = plt.subplots()
+        ax1.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+        ax1.axis('equal')
+        st.pyplot(fig1)
+
+        
+if _name_ == "_main_":
     main()
