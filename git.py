@@ -177,11 +177,7 @@ theme_freq
 
 visualize_themes(theme_freq)
 
-!pip install docx
 
-!pip install python-docx
-
-!pip install aspose-words
 
 from docx import Document
 from docx.shared import Inches
