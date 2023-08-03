@@ -1,24 +1,24 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
 def main():
-    st.title("THEME GENERATOR")
+    st.title("Text Input with Two Run Buttons")
 
-    # Empty box (placeholder)
-    input_text = st.text_area("Enter text here", value="")
+    # Text input box
+    input_text = st.text_area("Enter text here")
 
-    # Run button
-    if st.button("Run"):
-        # Perform some action here when the button is clicked
+    # Run buttons
+    col1, col2 = st.beta_columns(2)
+    if col1.button("Run on Left"):
+        run_analysis(input_text)
 
-        labels = ['teamless', 'impact-driven', 'productivity', 'misscommunication','cross level marketing']
-        sizes = [13.9,20.8,16.7,26.4,22.2]
-        fig1, ax1 = plt.subplots()
-        ax1.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
-        ax1.axis('equal')
-        st.pyplot(fig1)
+    if col2.button("Run on Right"):
+        run_analysis(input_text)
 
-        
-if _name_ == "_main_":
+def run_analysis(text):
+    # Add your analysis code here
+    # For example, you can print the input text
+    st.write("Analysis for input text:")
+    st.write(text)
+
+if __name__ == "__main__":
     main()
