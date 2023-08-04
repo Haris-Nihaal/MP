@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title("Text Input with Two Run Buttons")
+    st.title("Enter the text")
 
     # Text input box
     input_text = st.text_area("Enter text here")
