@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+pip install nltk
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
