@@ -1,0 +1,6 @@
+nltk
+pillow
+poe-api
+pandas
+matplotlib
+scikit-learn
